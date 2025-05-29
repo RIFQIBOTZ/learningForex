@@ -122,7 +122,7 @@
             background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
         }
 
-        /* PERUBAHAN PENTING: Navigasi sticky dengan efek hide/show dan posisi tengah */
+        /* Navigasi sticky dengan efek hide/show dan posisi tengah */
         .navigation {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
@@ -379,6 +379,73 @@
             margin: 20px 0;
         }
 
+        /* Gaya khusus untuk bagian NFP */
+        .nfp-impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .nfp-impact-card {
+            background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .nfp-impact-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+
+        .nfp-impact-card ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .nfp-impact-card li {
+            margin-bottom: 8px;
+        }
+
+        .nfp-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .nfp-data-table th {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .nfp-data-table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nfp-data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .nfp-example-box {
+            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            margin: 20px 0;
+        }
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -455,6 +522,10 @@
             .trend-indicators {
                 flex-direction: column;
             }
+            
+            .nfp-impact-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -466,6 +537,10 @@
             
             .header h1 {
                 font-size: 1.8rem;
+            }
+            
+            .nfp-data-table {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -507,6 +582,7 @@
                 <a href="#sesi-pasar" class="nav-item">Sesi Pasar</a>
                 <a href="#tipe-trader" class="nav-item">Tipe Trader</a>
                 <a href="#analisa" class="nav-item">Cara Analisa</a>
+                <a href="#trading-nfp" class="nav-item">Trading NFP</a>
             </div>
         </nav>
 
@@ -858,6 +934,104 @@
                 </div>
             </div>
         </section>
+
+        <!-- Bagian NFP ditempatkan di bagian paling bawah -->
+        <section id="trading-nfp" class="content-section">
+            <div class="section-header">
+                <span class="emoji">📊</span>Trading Saat Rilis Non-Farm Payroll (NFP)
+            </div>
+            <div class="section-content">
+                <div class="card">
+                    <h3>📅 Apa itu NFP?</h3>
+                    <p>Non-Farm Payroll (NFP) adalah laporan bulanan dari Departemen Tenaga Kerja AS yang mengukur jumlah pekerjaan baru di luar sektor pertanian. Rilis setiap Jumat pertama setiap bulan, dan berdampak besar terhadap nilai tukar Dolar AS (USD).</p>
+                </div>
+                
+                <div class="tips-box">
+                    <h3>⭐ Kenapa NFP Penting?</h3>
+                    <ul>
+                        <li><strong>Indikator Ekonomi</strong>: Menunjukkan kesehatan ekonomi AS melalui jumlah pekerjaan.</li>
+                        <li><strong>Pengaruh Nilai Tukar</strong>: Pekerjaan naik → Dolar menguat; pekerjaan turun → Dolar melemah.</li>
+                        <li><strong>Volatilitas Tinggi</strong>: Pergerakan harga signifikan, menciptakan peluang dan risiko besar.</li>
+                        <li><strong>Prediksi Suku Bunga</strong>: NFP baik → kemungkinan suku bunga naik.</li>
+                        <li><strong>Diperhatikan Pasar Global</strong>: Jadi sorotan utama para trader di awal bulan.</li>
+                    </ul>
+                </div>
+                
+                <div class="nfp-impact-grid">
+                    <div class="nfp-impact-card">
+                        <h3>📈 Jika NFP Naik (Data Bagus)</h3>
+                        <p>USD menguat, menyebabkan:</p>
+                        <ul>
+                            <li>Pair seperti XAU/USD, EUR/USD, GBP/USD → turun</li>
+                            <li>Pair seperti USD/JPY, USD/CHF, USD/CAD → naik</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nfp-impact-card">
+                        <h3>📉 Jika NFP Turun (Data Buruk)</h3>
+                        <p>Efek sebaliknya terjadi:</p>
+                        <ul>
+                            <li>Pair seperti XAU/USD, EUR/USD, GBP/USD → naik</li>
+                            <li>Pair seperti USD/JPY, USD/CHF, USD/CAD → turun</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🔍 Cara Cek Jadwal NFP</h3>
+                    <p>Gunakan <strong>ForexFactory.com</strong> atau <strong>DailyFX.com</strong></p>
+                    <p>Perhatikan tiga data utama:</p>
+                    
+                    <table class="nfp-data-table">
+                        <tr>
+                            <th>Data</th>
+                            <th>Keterangan</th>
+                        </tr>
+                        <tr>
+                            <td>Previous (bulan lalu)</td>
+                            <td>Data NFP bulan sebelumnya</td>
+                        </tr>
+                        <tr>
+                            <td>Forecast (perkiraan)</td>
+                            <td>Perkiraan data NFP bulan ini</td>
+                        </tr>
+                        <tr>
+                            <td>Actual (rilis saat ini)</td>
+                            <td>Data NFP yang baru dirilis</td>
+                        </tr>
+                    </table>
+                    
+                    <p>Perbandingan ketiganya memberi gambaran prediksi arah pasar.</p>
+                </div>
+                
+                <div class="analysis-steps">
+                    <h3>🎯 Strategi Trading NFP</h3>
+                    <ol>
+                        <li><strong>Kenali Tren Pasar</strong>: Pahami tren global (bullish/bearish) sebelum NFP rilis.</li>
+                        <li><strong>Persiapkan Diri</strong>: Ketahui jam rilis (biasanya pukul 20:30 WIB), siapkan strategi dan posisi lebih awal.</li>
+                        <li><strong>Hindari Overtrade</strong>: Jangan serakah saat volatilitas tinggi. Jaga manajemen risiko.</li>
+                        <li><strong>Buat Rencana Trading</strong>: Tentukan lot size, SL (stop loss), dan TP (take profit) sebelum masuk pasar.</li>
+                        <li><strong>Pahami Risiko</strong>: Spread bisa melebar saat NFP. Pertimbangkan biaya dan pergerakan tak terduga.</li>
+                        <li><strong>Kontrol Emosi</strong>: Jangan entry karena panik atau euforia. NFP ada setiap bulan, sabar dan disiplin.</li>
+                    </ol>
+                </div>
+                
+                <div class="nfp-example-box">
+                    <h3>📊 Pola Umum Pergerakan Saat NFP</h3>
+                    <p>Sebelum rilis NFP, market cenderung konsolidasi. Setelah data rilis:</p>
+                    <ul>
+                        <li>Jika hasil sesuai/lebih baik dari prediksi → breakout signifikan.</li>
+                        <li>Strategi: Gunakan buy stop/sell stop di atas/bawah zona konsolidasi untuk antisipasi pergerakan cepat.</li>
+                    </ul>
+                    
+                    <div class="card" style="margin-top: 20px; background: rgba(0,0,0,0.2);">
+                        <h3>📈 Contoh Nyata:</h3>
+                        <p>Pada 3 Februari, NFP dirilis dari 260K → 517K (data sangat bagus).</p>
+                        <p>→ USD menguat tajam. Pair XAU/USD turun signifikan dalam satu candle besar pada timeframe 30 menit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script>
@@ -939,25 +1113,21 @@
             observer.observe(section);
         });
 
-        // ========== PERUBAHAN PENTING: Logika hide/show navigasi saat scroll ==========
+        // Logika hide/show navigasi saat scroll
         let lastScrollTop = 0;
         const navigation = document.getElementById('navigation');
-        const scrollThreshold = 50; // Pixel scroll sebelum navigasi disembunyikan
+        const scrollThreshold = 50;
 
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             
             if (currentScroll > scrollThreshold) {
-                // Scroll ke bawah
                 if (currentScroll > lastScrollTop) {
                     navigation.classList.add('hidden');
-                } 
-                // Scroll ke atas
-                else {
+                } else {
                     navigation.classList.remove('hidden');
                 }
             } else {
-                // Di bagian atas halaman
                 navigation.classList.remove('hidden');
             }
             
